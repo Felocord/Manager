@@ -55,7 +55,7 @@ This is an open-source project, you can do so without any programming.
 Here are a few things you can do:
 
 - [Test and report issues](https://github.com/vendetta-mod/VendettaManager/issues/new/choose)
-- [Translate the app into your language](https://crowdin.com/project/vendetta-manager)
+<!-- - [Translate the app into your language](https://crowdin.com/project/vendetta-manager) -->
     
 License
 ---

@@ -227,10 +227,10 @@ class AboutScreen : Screen {
                     ElevatedCard {
                         val navigator = LocalNavigator.currentOrThrow
 
-                        ListItem(
-                            text = stringResource(R.string.label_translate),
-                            onClick = { uriHandler.openUri("https://crowdin.com/project/vendetta-manager") }
-                        )
+                        // ListItem(
+                        //     text = stringResource(R.string.label_translate),
+                        //     onClick = { uriHandler.openUri("https://crowdin.com/project/vendetta-manager") }
+                        // )
                         Divider(
                             thickness = 0.5.dp,
                             color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
