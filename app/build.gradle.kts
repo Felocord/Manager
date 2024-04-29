@@ -105,7 +105,13 @@ dependencies {
     implementation(libs.bundles.voyager)
 
     implementation(files("libs/lspatch.aar"))
+
     implementation(libs.aboutlibraries.core)
+    implementation(libs.binaryResources) {
+        exclude(module = "checker-qual")
+        exclude(module = "jsr305")
+        exclude(module = "guava")
+    }
     implementation(libs.kotlinx.datetime)
     implementation(libs.kotlinx.collections)
     implementation(libs.zip.android) {

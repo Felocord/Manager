@@ -14,6 +14,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.collection.ObjectList
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.graphics.drawable.toBitmap
@@ -105,3 +106,13 @@ fun getSystemProp(prop: String): String? {
 
 val isMiui: Boolean
     get() = getSystemProp("ro.miui.ui.version.name")?.isNotEmpty() ?: false
+
+
+inline fun <E> ObjectList<E>.find(block: (E) -> Boolean): E? {
+    forEach { value ->
+        if (block(value))
+            return value
+    }
+
+    return null
+}

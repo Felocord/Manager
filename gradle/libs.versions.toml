@@ -17,6 +17,7 @@ compose-bom = "2023.10.01"
 # Misc.
 aboutlibraries = "10.10.0"
 accompanist = "0.33.2-alpha"
+binary-resources = "2.0.0"
 coil = "2.4.0"
 koin = "3.4.0"
 kotlinx-datetime = "0.5.0"
@@ -78,6 +79,7 @@ voyager-koin = { group = "cafe.adriel.voyager", name = "voyager-koin", version.r
 
 # Misc.
 aboutlibraries-core = { group = "com.mikepenz", name = "aboutlibraries", version.ref = "aboutlibraries" }
+binaryResources = { module = "com.aliucord:binary-resources", version.ref = "binary-resources" }
 kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinx-datetime" }
 kotlinx-collections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinx-collections" }
 zip-android = { group = "io.github.diamondminer88", name = "zip-android", version.ref = "zip-android" }
