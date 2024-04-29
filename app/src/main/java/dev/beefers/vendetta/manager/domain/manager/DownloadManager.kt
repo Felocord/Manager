@@ -23,14 +23,14 @@ class DownloadManager(
 
     suspend fun downloadVendetta(out: File, onProgressUpdate: (Float?) -> Unit) =
         download(
-            "https://github.com/vendetta-mod/VendettaXposed/releases/latest/download/app-release.apk",
+            "https://github.com/pyoncord/PyoncordXposed/releases/latest/download/app-release.apk",
             out,
             onProgressUpdate
         )
 
     suspend fun downloadUpdate(out: File) =
         download(
-            "https://github.com/vendetta-mod/VendettaManager/releases/latest/download/Manager.apk",
+            "https://github.com/pyoncord/PyoncordManager/releases/latest/download/Manager.apk",
             out
         ) {
             /* TODO: Update a progress bar in the update dialog */
@@ -54,7 +54,7 @@ class DownloadManager(
             ?: throw IllegalStateException("DownloadManager service is not available")
 
         val downloadId = DownloadManager.Request(Uri.parse(url))
-            .setTitle("Vendetta Manager")
+            .setTitle("Pyoncord Manager")
             .setDescription("Downloading ${out.name}...")
             .setDestinationUri(Uri.fromFile(out))
             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)

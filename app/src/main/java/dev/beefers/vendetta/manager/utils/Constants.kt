@@ -6,11 +6,12 @@ import dev.beefers.vendetta.manager.BuildConfig
 object Constants {
 
     val TEAM_MEMBERS = listOf(
-        TeamMember("Pylix", "Developer - Vendetta", "amsyarasyiq"),
+        TeamMember("Pylix", "Developer - Pyoncord/Vendetta", "amsyarasyiq"),
         TeamMember("Kasi", "Developer - Xposed Module", "redstonekasi")
     )
 
-    val VENDETTA_DIR = Environment.getExternalStorageDirectory().resolve("Vendetta")
+    // NOTE: This is no longer used
+    val VENDETTA_DIR = Environment.getExternalStorageDirectory().resolve("Pyoncord")
 
     val DUMMY_VERSION = DiscordVersion(1, 0, DiscordVersion.Type.STABLE)
 

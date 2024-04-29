@@ -42,7 +42,7 @@ class HomeViewModel(
     private val cacheDir = context.externalCacheDir ?: File(
         Environment.getExternalStorageDirectory(),
         Environment.DIRECTORY_DOWNLOADS
-    ).resolve("VendettaManager").also { it.mkdirs() }
+    ).resolve("PyoncordManager").also { it.mkdirs() }
 
     var discordVersions by mutableStateOf<Map<DiscordVersion.Type, DiscordVersion?>?>(null)
         private set
@@ -107,14 +107,14 @@ class HomeViewModel(
 
     private fun checkForUpdate() {
         screenModelScope.launch {
-            release = repo.getLatestRelease("VendettaManager").dataOrNull
+            release = repo.getLatestRelease("pyoncord/PyoncordManager").dataOrNull
             release?.let {
                 showUpdateDialog = it.tagName.toInt() > BuildConfig.VERSION_CODE
             }
-            repo.getLatestRelease("VendettaXposed").ifSuccessful {
+            repo.getLatestRelease("pyoncord/PyoncordXposed").ifSuccessful {
                 if (prefs.moduleVersion != it.tagName) {
                     prefs.moduleVersion = it.tagName
-                    val module = File(cacheDir, "vendetta.apk")
+                    val module = File(cacheDir, "bunny.apk")
                     if (module.exists()) module.delete()
                 }
             }

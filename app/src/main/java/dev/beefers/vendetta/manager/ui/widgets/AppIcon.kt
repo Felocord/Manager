@@ -22,7 +22,7 @@ fun AppIcon(
 ) {
     val iconColor = remember(customIcon, releaseChannel) {
         when {
-            customIcon -> Color(0xFF3AB8BA)
+            customIcon -> Color(0xFF48488B)
             releaseChannel == DiscordVersion.Type.ALPHA -> Color(0xFFFBB33C)
             else -> Color(0xFF5865F2)
         }
