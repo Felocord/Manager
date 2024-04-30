@@ -11,7 +11,7 @@
     <string name="msg_five_left">Nog 5 krane</string>
     <string name="msg_two_left">Nog 2 krane</string>
     <string name="msg_loading">Laai tans…</string>
-    <string name="msg_downgrade">Kan nie afgradeer nie, probeer eers deïnstalleer</string>
+    <string name="msg_downgrade_disallowed">Kan nie afgradeer nie, probeer eers deïnstalleer</string>
     <string name="msg_unlocked">Jy is nou \'n ontwikkelaar</string>
     <string name="msg_permission_grant">Vir Bunny Bestuurder om te funksioneer, word lêertoestemmings vereis. Aangesien gedeelde data in ~/Bunny gestoor word, word toestemmings vereis om toegang daartoe te verkry.</string>
     <string name="msg_shizuku_denied">Failed to obtain Shizuku permissions</string>

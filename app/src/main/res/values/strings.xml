@@ -12,7 +12,8 @@
     <string name="msg_five_left">5 more taps</string>
     <string name="msg_two_left">2 more taps</string>
     <string name="msg_loading">Loading…</string>
-    <string name="msg_downgrade">Cannot downgrade, try uninstalling first</string>
+    <string name="msg_downgrade">Downgrade</string>
+    <string name="msg_downgrade_disallowed">Cannot downgrade, try uninstalling first</string>
     <string name="msg_unlocked">You are now a developer</string>
     <string name="msg_permission_grant">In order for Bunny Manager to function, file permissions are required. Since shared data is stored in ~/Bunny, permissions are required in order to access it.</string>
     <string name="msg_shizuku_denied">Failed to obtain Shizuku permissions</string>
@@ -146,6 +147,8 @@
     <string name="settings_version">Discord version</string>
     <string name="settings_debuggable">Debuggable</string>
     <string name="settings_debuggable_description">Enable debuggable flag</string>
+    <string name="settings_allow_downgrade">Allow downgrading</string>
+    <string name="settings_allow_downgrade_description">Bypass downgrade check by Bunny Manager, useful if your device already allows downgrading through root</string>
 
     <string name="settings_logs_alternate_lines">Alternate lines</string>
     <string name="settings_logs_line_wrap">Wrap lines</string>

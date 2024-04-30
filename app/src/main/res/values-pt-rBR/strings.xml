@@ -11,7 +11,7 @@
     <string name="msg_five_left">Mais 5 toques</string>
     <string name="msg_two_left">Mais 2 toques</string>
     <string name="msg_loading">Carregando…</string>
-    <string name="msg_downgrade">Não é possível desatualizar, tente desinstalar primeiro</string>
+    <string name="msg_downgrade_disallowed">Não é possível desatualizar, tente desinstalar primeiro</string>
     <string name="msg_unlocked">Você agora é um desenvolvedor</string>
     <string name="msg_permission_grant">Para o Gerenciador do Bunny funcionar corretamente, você precisa conceder as permissões de arquivos. Como os dados compartilhados são armazenados em ~/Bunny, as permissões são necessárias para acessa-los.</string>
     <string name="msg_shizuku_denied">Falha ao obter permissões Shizuku</string>

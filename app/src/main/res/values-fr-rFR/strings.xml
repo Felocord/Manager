@@ -11,7 +11,7 @@
     <string name="msg_five_left">Appuyez encore 5 fois</string>
     <string name="msg_two_left">Appuyez encore 2 fois</string>
     <string name="msg_loading">Chargement en cours…</string>
-    <string name="msg_downgrade">Impossible de revenir à la version ultérieure, essayez d\'abord de la désinstaller puis réessayez</string>
+    <string name="msg_downgrade_disallowed">Impossible de revenir à la version ultérieure, essayez d\'abord de la désinstaller puis réessayez</string>
     <string name="msg_unlocked">Vous êtes maintenant un développeur</string>
     <string name="msg_permission_grant">Pour que le Gestionnaire de Bunny fonctionne correctement, la permission de stockage de fichier est requise. Les fichiers sont stockés dans le dossier Bunny, des autorisations sont nécessaires pour y accéder.</string>
     <string name="msg_shizuku_denied">Échec de l\'obtention des permissions Shizuku</string>

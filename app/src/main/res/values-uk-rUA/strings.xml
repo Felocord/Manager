@@ -11,7 +11,7 @@
     <string name="msg_five_left">Ще 5 натисків</string>
     <string name="msg_two_left">Ще 2 натиску</string>
     <string name="msg_loading">Завантаження…</string>
-    <string name="msg_downgrade">Неможливо понизити версію, спробуйте спочатку видалити</string>
+    <string name="msg_downgrade_disallowed">Неможливо понизити версію, спробуйте спочатку видалити</string>
     <string name="msg_unlocked">Тепер ви – розробник</string>
     <string name="msg_permission_grant">Для того, щоб Bunny Менеджер функціонував, потрібен доступ до файлів. Оскільки спільні дані зберігаються в ~/Bunny, для доступу необхіден дозвіл.</string>
     <string name="msg_shizuku_denied">Failed to obtain Shizuku permissions</string>

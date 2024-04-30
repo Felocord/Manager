@@ -11,7 +11,7 @@
     <string name="msg_five_left">5번 더 누르세요</string>
     <string name="msg_two_left">2번 더 누르세요</string>
     <string name="msg_loading">불러오는 중…</string>
-    <string name="msg_downgrade">다운그레이드하지 못했어요. 먼저 삭제해 보세요</string>
+    <string name="msg_downgrade_disallowed">다운그레이드하지 못했어요. 먼저 삭제해 보세요</string>
     <string name="msg_unlocked">개발자 모드가 활성화되었어요</string>
     <string name="msg_permission_grant">Bunny Manager가 정상적으로 작동하려면, 파일 권한을 부여해 주셔야 해요. 공유된 데이터가 ~/Bunny에 저장되기 때문에, Manager가 작동하려면 권한이 필요해요.</string>
     <string name="msg_shizuku_denied">Shizuku 권한을 얻지 못했어요.</string>

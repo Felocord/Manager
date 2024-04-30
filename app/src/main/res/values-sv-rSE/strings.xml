@@ -11,7 +11,7 @@
     <string name="msg_five_left">5 tryck till</string>
     <string name="msg_two_left">2 tryck till</string>
     <string name="msg_loading">Laddar…</string>
-    <string name="msg_downgrade">Kan inte nedgradera, försök att avinstallera först</string>
+    <string name="msg_downgrade_disallowed">Kan inte nedgradera, försök att avinstallera först</string>
     <string name="msg_unlocked">Du är nu en utvecklare</string>
     <string name="msg_permission_grant">För att Bunny Hanteraren ska kunna fungera så krävs filbehörigheter. Eftersom delad data lagras i ~/Bunny så krävs behörigheter för att komma åt den.</string>
     <string name="msg_shizuku_denied">Misslyckades med att få Shizuku-behörigheter</string>

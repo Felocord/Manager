@@ -153,7 +153,7 @@ class HomeScreen : Screen {
                     onClick = {
                         navigator.navigate(InstallerScreen(latestVersion!!))
                     },
-                    enabled = latestVersion != null && latestVersion >= (currentVersion ?: Constants.DUMMY_VERSION),
+                    enabled = latestVersion != null && (prefs.allowDowngrade || latestVersion >= (currentVersion ?: Constants.DUMMY_VERSION)),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     val label = when {
@@ -161,7 +161,7 @@ class HomeScreen : Screen {
                         currentVersion == null -> R.string.action_install
                         currentVersion == latestVersion -> R.string.action_reinstall
                         latestVersion > currentVersion -> R.string.action_update
-                        else -> R.string.msg_downgrade
+                        else -> if (prefs.allowDowngrade) R.string.msg_downgrade else R.string.msg_downgrade_disallowed
                     }
 
                     Text(

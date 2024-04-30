@@ -50,6 +50,8 @@ class PreferenceManager(context: Context) :
 
     var logsLineWrap by booleanPreference("logs_line_wrap", false)
 
+    var allowDowngrade by booleanPreference("allow_downgrade", false)
+
     init {
         // Will be removed next update
         if(mirror == Mirror.VENDETTA_ROCKS) mirror = Mirror.VENDETTA_ROCKS_ALT

@@ -11,7 +11,7 @@
     <string name="msg_five_left">még 5 érintés</string>
     <string name="msg_two_left">még 2 érintés</string>
     <string name="msg_loading">Betöltés…</string>
-    <string name="msg_downgrade">Nem lehet leminősíteni, próbálja meg először eltávolítani</string>
+    <string name="msg_downgrade_disallowed">Nem lehet leminősíteni, próbálja meg először eltávolítani</string>
     <string name="msg_unlocked">Ön most már fejlesztő</string>
     <string name="msg_permission_grant">A Bunny Kezelő működéséhez fájlengedélyekre van szükség. Mivel a megosztott adatokat a ~/Bunny fájlban tárolja, a hozzáféréshez engedélyekre van szükség.</string>
     <string name="msg_shizuku_denied">Nem sikerült megszerezni Shizuku engedélyeit</string>

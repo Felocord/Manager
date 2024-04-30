@@ -11,7 +11,7 @@
     <string name="msg_five_left">עוד 5 לחיצות</string>
     <string name="msg_two_left">עוד 2 לחיצות</string>
     <string name="msg_loading">טוען…</string>
-    <string name="msg_downgrade">לא ניתן לחזור גרסה, נסה קודם להסיר את האפליקציה</string>
+    <string name="msg_downgrade_disallowed">לא ניתן לחזור גרסה, נסה קודם להסיר את האפליקציה</string>
     <string name="msg_unlocked">אתה כעת מפתח</string>
     <string name="msg_permission_grant">על מנת שמנהל Bunny יפעל, נדרשות הרשאות קובץ. מכיוון שהנתונים המשותפים מאוחסנים ב-~/Bunny, נדרשות הרשאות על מנת לגשת אליהם.</string>
     <string name="msg_shizuku_denied">Failed to obtain Shizuku permissions</string>

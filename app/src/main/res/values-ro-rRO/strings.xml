@@ -11,7 +11,7 @@
     <string name="msg_five_left">Încă 5 atingeri</string>
     <string name="msg_two_left">încă 2 atingeri</string>
     <string name="msg_loading">Încărcare…</string>
-    <string name="msg_downgrade">Imposibil de retrogradat, încercați să dezinstalați mai întâi</string>
+    <string name="msg_downgrade_disallowed">Imposibil de retrogradat, încercați să dezinstalați mai întâi</string>
     <string name="msg_unlocked">Ați devenit dezvoltator</string>
     <string name="msg_permission_grant">Pentru ca Bunny Manager să funcţioneze, sunt necesare permisiunile fişierelor. Deoarece datele partajate sunt stocate în ~/Bunny, sunt necesare permisiuni pentru a le accesa.</string>
     <string name="msg_shizuku_denied">Failed to obtain Shizuku permissions</string>

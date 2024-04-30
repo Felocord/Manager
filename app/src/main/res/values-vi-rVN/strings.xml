@@ -11,7 +11,7 @@
     <string name="msg_five_left">Nhấn thêm 5 lần nữa</string>
     <string name="msg_two_left">Nhấn thêm 2 lần nữa</string>
     <string name="msg_loading">Đang tải…</string>
-    <string name="msg_downgrade">Không thể hạ cấp, hãy thử gỡ cài đặt trước</string>
+    <string name="msg_downgrade_disallowed">Không thể hạ cấp, hãy thử gỡ cài đặt trước</string>
     <string name="msg_unlocked">Bạn hiện là nhà phát triển</string>
     <string name="msg_permission_grant">Để Trình quản lý Bunny hoạt động, bạn cần cấp quyền truy cập tệp. Do dữ liệu chia sẻ được lưu trữ trong ~/Bunny, nên cần có quyền để truy cập dữ liệu đó.</string>
     <string name="msg_shizuku_denied">Nhận quyền của Shizuku thất bại</string>

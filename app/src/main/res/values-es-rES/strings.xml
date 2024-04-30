@@ -11,7 +11,7 @@
     <string name="msg_five_left">5 toques más</string>
     <string name="msg_two_left">2 toques más</string>
     <string name="msg_loading">Cargando…</string>
-    <string name="msg_downgrade">No se puede desactualizar, intente desinstalándolo primero</string>
+    <string name="msg_downgrade_disallowed">No se puede desactualizar, intente desinstalándolo primero</string>
     <string name="msg_unlocked">Ahora eres un desarrollador</string>
     <string name="msg_permission_grant">Para que Bunny Manager funcione, se requieren permisos de archivos. Dado que los datos compartidos se almacenan en ~/Bunny, se requieren permisos para acceder a ellos.</string>
     <string name="msg_shizuku_denied">Failed to obtain Shizuku permissions</string>

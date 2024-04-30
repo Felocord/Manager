@@ -131,6 +131,13 @@ class DeveloperSettings: Screen {
                         prefs.moduleLocation = prefs.DEFAULT_MODULE_LOCATION
                     }
                 )
+
+                SettingsSwitch(
+                    label = stringResource(R.string.settings_allow_downgrade),
+                    secondaryLabel = stringResource(R.string.settings_allow_downgrade_description),
+                    pref = prefs.allowDowngrade,
+                    onPrefChange = { prefs.allowDowngrade = it }
+                )
             }
         }
     }

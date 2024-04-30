@@ -11,7 +11,7 @@
     <string name="msg_five_left">5 kez daha basın</string>
     <string name="msg_two_left">2 kez daha basın</string>
     <string name="msg_loading">Yükleniyor…</string>
-    <string name="msg_downgrade">Sürüm düşürülemiyor, önce kaldırmayı deneyin</string>
+    <string name="msg_downgrade_disallowed">Sürüm düşürülemiyor, önce kaldırmayı deneyin</string>
     <string name="msg_unlocked">Artık bir geliştiricisiniz</string>
     <string name="msg_permission_grant">Bunny Manager\'ın düzgün çalışması için dosya izinleri gereklidir. Paylaşılan uygulama verileri ~/Bunny\'da depolandığından, dosyalara erişim için izin gerekmektedir.</string>
     <string name="msg_shizuku_denied">Shizuku izinleri alınamadı</string>
