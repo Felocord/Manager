@@ -53,7 +53,7 @@ object Signer : KoinComponent {
         val certificate = keyStore.getCertificate(alias) as X509Certificate
 
         ApkSigner.SignerConfig.Builder(
-            "Pyoncord",
+            "Bunny",
             keyStore.getKey(alias, password) as PrivateKey,
             listOf(certificate)
         ).build()
@@ -75,7 +75,7 @@ object Signer : KoinComponent {
         do serialNumber = SecureRandom().nextInt().toBigInteger()
         while (serialNumber < BigInteger.ZERO)
 
-        val x500Name = X500Name("CN=Pyoncord Manager")
+        val x500Name = X500Name("CN=Bunny Manager")
         val pair = KeyPairGenerator.getInstance("RSA").run {
             initialize(2048)
             generateKeyPair()

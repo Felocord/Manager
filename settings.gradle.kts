@@ -6,5 +6,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = "Pyoncord Manager"
+rootProject.name = "Bunny Manager"
 include(":app")

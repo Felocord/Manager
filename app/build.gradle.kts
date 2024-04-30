@@ -13,11 +13,11 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "dev.beefers.vendetta.manager"
+        applicationId = "io.github.pyoncord.manager"
         minSdk = 28
         targetSdk = 34
-        versionCode = 1123
-        versionName = "1.1.23"
+        versionCode = 1000
+        versionName = "1.0.0"
 
         buildConfigField("String", "GIT_BRANCH", "\"${getCurrentBranch()}\"")
         buildConfigField("String", "GIT_COMMIT", "\"${getLatestCommit()}\"")
