@@ -70,11 +70,12 @@ object AxmlUtil {
     fun patchAdaptiveIcon(
         apk: File,
         resourcePath: String,
+        referencePath: String,
         backgroundColor: BinaryResourceIdentifier? = null,
         foregroundIcon: BinaryResourceIdentifier? = null,
         monochromeIcon: BinaryResourceIdentifier? = null,
     ) {
-        val xml = readAxml(apk, resourcePath)
+        val xml = readAxml(apk, referencePath)
         val xmlChunk = xml.getMainAxmlChunk()
 
         // Patch the background color resource reference
