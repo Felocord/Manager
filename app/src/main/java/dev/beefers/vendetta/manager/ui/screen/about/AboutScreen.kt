@@ -134,13 +134,13 @@ class AboutScreen : Screen {
                         LinkItem(
                             icon = R.drawable.ic_github,
                             label = R.string.label_github,
-                            link = "https://github.com/vendetta-mod"
+                            link = "https://github.com/pyoncord"
                         )
 
                         LinkItem(
                             icon = R.drawable.ic_discord,
                             label = R.string.label_discord,
-                            link = "https://discord.gg/n9QQ4XhhJP"
+                            link = "https://discord.gg/2FXjYgWXHb9Q"
                         )
                     }
                 }
