@@ -89,9 +89,8 @@ object ArscUtil {
         val resourceNameIdx = this.keyStringPool.addString(resourceName, /* deduplicate = */ true)
 
         // Add a new resource entry to the type spec chunk
-        val resourceIdx = specChunk.addResource(/* flags = */ 0)
-	        // HACK: Resource index returned by addResource is off by 1 in release builds due to optimizations or something
-            + if (BuildConfig.DEBUG) 0 else 1
+	    // HACK: Resource index returned by addResource is off by 1 in release builds due to optimizations or something
+        val resourceIdx = specChunk.addResource(/* flags = */ 0) + if (BuildConfig.DEBUG) 0 else 1
 
         for (typeChunk in typeChunks) {
             // If no matching config, add a null entry and try next chunk
