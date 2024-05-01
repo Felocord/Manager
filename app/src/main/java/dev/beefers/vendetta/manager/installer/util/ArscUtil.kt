@@ -5,6 +5,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import com.github.diamondminer88.zip.ZipReader
 import com.google.devrel.gmscore.tools.apk.arsc.*
+import dev.beefers.vendetta.manager.BuildConfig
 import java.io.File
 
 object ArscUtil {
@@ -89,6 +90,8 @@ object ArscUtil {
 
         // Add a new resource entry to the type spec chunk
         val resourceIdx = specChunk.addResource(/* flags = */ 0)
+	        // HACK: Resource index returned by addResource is off by 1 in release builds due to optimizations or something
+            + if (BuildConfig.DEBUG) 0 else 1
 
         for (typeChunk in typeChunks) {
             // If no matching config, add a null entry and try next chunk
