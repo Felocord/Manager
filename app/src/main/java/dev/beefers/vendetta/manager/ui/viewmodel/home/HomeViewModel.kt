@@ -114,7 +114,7 @@ class HomeViewModel(
             repo.getLatestRelease("pyoncord/BunnyXposed").ifSuccessful {
                 if (prefs.moduleVersion != it.tagName) {
                     prefs.moduleVersion = it.tagName
-                    val module = File(cacheDir, "bunny.apk")
+                    val module = File(cacheDir, "xposed.apk")
                     if (module.exists()) module.delete()
                 }
             }
