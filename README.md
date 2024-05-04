@@ -14,7 +14,7 @@
 
   ![Debug build status](https://img.shields.io/github/actions/workflow/status/pyoncord/BunnyManager/build-debug.yml?label=Debug%20Build&logo=github&style=for-the-badge&branch=main)
   [![Stars](https://img.shields.io/github/stars/pyoncord/BunnyManager?logo=github&style=for-the-badge)](https://github.com/pyoncord/BunnyManager/stargazers)
-  [![Discord](https://img.shields.io/discord/1015931589865246730?logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/XjYgWXHb9Q)
+  [![Discord](https://img.shields.io/discord/1196075698301968455?logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/XjYgWXHb9Q)
   
   <br>
   
