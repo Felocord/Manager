@@ -140,7 +140,7 @@ class AboutScreen : Screen {
                         LinkItem(
                             icon = R.drawable.ic_discord,
                             label = R.string.label_discord,
-                            link = "https://discord.gg/2FXjYgWXHb9Q"
+                            link = "https://discord.gg/XjYgWXHb9Q"
                         )
                     }
                 }
