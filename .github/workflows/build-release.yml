@@ -10,7 +10,7 @@ on:
       versionCode:
         required: true
         description: This releases version code
-        default: "v0.0.0"
+        default: "0.0.0"
 
 jobs:
   build:
