@@ -25,7 +25,7 @@ class AddVendettaStep(
     override suspend fun run(runner: StepRunner) {
         val vendetta = runner.getCompletedStep<DownloadVendettaStep>().workingCopy
 
-        runner.logger.i("Adding BunnyXposed module with LSPatch")
+        runner.logger.i("Adding FelocordXposed module with LSPatch")
         val files = signedDir.listFiles()
             ?.takeIf { it.isNotEmpty() }
             ?: throw Error("Missing APKs from signing step")

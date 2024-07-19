@@ -42,7 +42,7 @@ class HomeViewModel(
     private val cacheDir = context.externalCacheDir ?: File(
         Environment.getExternalStorageDirectory(),
         Environment.DIRECTORY_DOWNLOADS
-    ).resolve("BunnyManager").also { it.mkdirs() }
+    ).resolve("FelocordManager").also { it.mkdirs() }
 
     var discordVersions by mutableStateOf<Map<DiscordVersion.Type, DiscordVersion?>?>(null)
         private set
@@ -107,11 +107,11 @@ class HomeViewModel(
 
     private fun checkForUpdate() {
         screenModelScope.launch {
-            release = repo.getLatestRelease("pyoncord/BunnyManager").dataOrNull
+            release = repo.getLatestRelease("Felocord/Manager").dataOrNull
             release?.let {
                 showUpdateDialog = it.tagName.toInt() > BuildConfig.VERSION_CODE
             }
-            repo.getLatestRelease("pyoncord/BunnyXposed").ifSuccessful {
+            repo.getLatestRelease("Felocord/Xposed").ifSuccessful {
                 if (prefs.moduleVersion != it.tagName) {
                     prefs.moduleVersion = it.tagName
                     val module = File(cacheDir, "xposed.apk")

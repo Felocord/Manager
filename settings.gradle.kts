@@ -6,5 +6,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = "Bunny Manager"
+rootProject.name = "Felocord Manager"
 include(":app")

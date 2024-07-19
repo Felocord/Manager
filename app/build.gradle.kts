@@ -13,11 +13,11 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "io.github.pyoncord.manager"
+        applicationId = "io.github.felitendo.manager"
         minSdk = 28
         targetSdk = 34
-        versionCode = 1005
-        versionName = "1.0.5"
+        versionCode = 1007
+        versionName = "1.0.7"
 
         buildConfigField("String", "GIT_BRANCH", "\"${getCurrentBranch()}\"")
         buildConfigField("String", "GIT_COMMIT", "\"${getLatestCommit()}\"")

@@ -21,7 +21,7 @@ class AdvancedSettingsViewModel(
     private val context: Context,
     private val prefs: PreferenceManager,
 ) : ScreenModel {
-    private val cacheDir = context.externalCacheDir ?: File(Environment.getExternalStorageDirectory(), Environment.DIRECTORY_DOWNLOADS).resolve("BunnyManager").also { it.mkdirs() }
+    private val cacheDir = context.externalCacheDir ?: File(Environment.getExternalStorageDirectory(), Environment.DIRECTORY_DOWNLOADS).resolve("FelocordManager").also { it.mkdirs() }
 
     fun clearCache() {
         cacheDir.deleteRecursively()
