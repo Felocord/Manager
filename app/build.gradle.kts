@@ -16,8 +16,8 @@ android {
         applicationId = "io.github.felitendo.manager"
         minSdk = 28
         targetSdk = 34
-        versionCode = 1007
-        versionName = "1.0.7"
+        versionCode = 1002
+        versionName = "1.0.2"
 
         buildConfigField("String", "GIT_BRANCH", "\"${getCurrentBranch()}\"")
         buildConfigField("String", "GIT_COMMIT", "\"${getLatestCommit()}\"")
