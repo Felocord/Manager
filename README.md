@@ -40,7 +40,7 @@ Build
 #### Instructions
 
 1. Clone the repo
-    - `git clone https://github.com/Felocord/Manager.git && cd FelocordManager`
+    - `git clone https://github.com/Felocord/Manager.git && cd Manager`
 2. Build the project
     - Linux: `chmod +x ./gradlew && gradlew assembleDebug`
     - Windows: `./gradlew assembleDebug`
