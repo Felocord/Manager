@@ -24,7 +24,7 @@ class PreferenceManager(context: Context) :
 
     var moduleVersion by stringPreference("module_version", "")
 
-    var patchIcon by booleanPreference("patch_icon", true)
+    var patchIcon by booleanPreference("patch_icon", false)
 
     var debuggable by booleanPreference("debuggable", false)
 
