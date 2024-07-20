@@ -94,7 +94,7 @@ class SettingsScreen : Screen {
                     text = stringResource(R.string.title_about),
                     subtext = buildString {
                         append(stringResource(R.string.app_name))
-                        append(" v${BuildConfig.VERSION_NAME}")
+                        append(" ${BuildConfig.VERSION_NAME}")
                         if (preferences.isDeveloper) {
                             append(" (${BuildConfig.GIT_COMMIT}")
                             if (BuildConfig.GIT_LOCAL_CHANGES || BuildConfig.GIT_LOCAL_COMMITS) {
