@@ -14,7 +14,7 @@
 
   ![Debug build status](https://img.shields.io/github/actions/workflow/status/Felocord/Manager/build-debug.yml?label=Debug%20Build&logo=github&style=for-the-badge&branch=main)
   [![Stars](https://img.shields.io/github/stars/Felocord/Manager?logo=github&style=for-the-badge)](https://github.com/Felocord/Manager/stargazers)
-  [![Discord](https://img.shields.io/discord/1196075698301968455?logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/XjYgWXHb9Q)
+  [![Discord](https://img.shields.io/discord/1196075698301968455?logo=discord&logoColor=white&style=for-the-badge)](https://felo.gg/discord)
   
   <br>
   

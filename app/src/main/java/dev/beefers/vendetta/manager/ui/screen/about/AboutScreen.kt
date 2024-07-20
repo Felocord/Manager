@@ -107,7 +107,7 @@ class AboutScreen : Screen {
                     )
 
                     Text(
-                        text = "v${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})",
+                        text = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})",
                         style = MaterialTheme.typography.labelLarge,
                         color = LocalContentColor.current.copy(alpha = 0.5f),
                         modifier = Modifier.clickable(
@@ -134,13 +134,13 @@ class AboutScreen : Screen {
                         LinkItem(
                             icon = R.drawable.ic_github,
                             label = R.string.label_github,
-                            link = "https://github.com/felitendo"
+                            link = "https://github.com/Felocord"
                         )
 
                         LinkItem(
                             icon = R.drawable.ic_discord,
                             label = R.string.label_discord,
-                            link = "https://discord.gg/XjYgWXHb9Q"
+                            link = "https://felo.gg/discord"
                         )
                     }
                 }
@@ -198,25 +198,17 @@ class AboutScreen : Screen {
                 ) {
                     ElevatedCard {
                         ListItem(
-                            text = "rushii",
-                            subtext = "Installer, zip library, and a portion of patching",
+                            text = "Pylix",
+                            subtext = "Base Code",
                             imageUrl = "https://github.com/rushiiMachine.png",
                             onClick = {
-                                uriHandler.openUri("https://github.com/rushiiMachine")
+                                uriHandler.openUri("https://github.com/amsyarasyiq")
                             }
                         )
                         Divider(
                             thickness = 0.5.dp,
                             color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
                             modifier = Modifier.padding(horizontal = 16.dp)
-                        )
-                        ListItem(
-                            text = "Xinto",
-                            subtext = "for the preference manager",
-                            imageUrl = "https://github.com/X1nto.png",
-                            onClick = {
-                                uriHandler.openUri("https://github.com/X1nto")
-                            }
                         )
                     }
                 }

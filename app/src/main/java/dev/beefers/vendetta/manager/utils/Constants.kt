@@ -6,8 +6,7 @@ import dev.beefers.vendetta.manager.BuildConfig
 object Constants {
 
     val TEAM_MEMBERS = listOf(
-        TeamMember("Pylix", "Developer - Felocord & Vendetta", "amsyarasyiq"),
-        TeamMember("Kasi", "Developer - Xposed Module", "redstonekasi")
+        TeamMember("Felitendo", "Developer - Felocord", "felitendo"),
     )
 
     // NOTE: This is no longer used
