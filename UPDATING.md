@@ -4,6 +4,6 @@ First Time:
 - git remote add public https://github.com/pyoncord/BunnyManager
 
 Then:
-- git pull public master --no-commit
+- git pull public main --no-commit
 - git commit -am "Merged updates from upstream repo"
-- git push origin master
+- git push origin main
