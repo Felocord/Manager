@@ -1,3 +1,4 @@
 {
-    "deepscan.ignoreConfirmWarning": true
+    "deepscan.ignoreConfirmWarning": true,
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
