@@ -16,8 +16,8 @@ android {
         applicationId = "io.github.felitendo.manager"
         minSdk = 28
         targetSdk = 34
-        versionCode = 107
-        versionName = "v1.0.7"
+        versionCode = 106
+        versionName = "v1.0.6"
 
         buildConfigField("String", "GIT_BRANCH", "\"${getCurrentBranch()}\"")
         buildConfigField("String", "GIT_COMMIT", "\"${getLatestCommit()}\"")
@@ -147,7 +147,7 @@ fun exec(vararg command: String): String? {
             isIgnoreExitValue = true
         }
 
-        if (errout.size() > 0)
+        if(errout.size() > 0)
             throw Error(errout.toString(Charsets.UTF_8))
 
         stdout.toString(Charsets.UTF_8).trim()
