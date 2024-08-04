@@ -3,23 +3,24 @@ name: Build Release
 on:
   workflow_dispatch:
     inputs:
-      beta:
-        type: boolean
-        description: Is beta?
-      draft:
-        type: boolean
-        description: Is draft?
+      versionName:
+        required: true
+        description: This releases version name
+        default: "v1.0.0"
+      versionCode:
+        required: true
+        description: This releases version code
+        default: "100"
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
 
       - name: Setup JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v2
         with:
           java-version: 17
           distribution: 'temurin'
@@ -28,85 +29,30 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2.0.10
 
-      - name: Extract Version From Gradle File
-        id: extract_version_from_gradle
-        run: |
-          set -e
-
-          # Ensure the file exists
-          if [ ! -f app/build.gradle.kts ]; then
-            echo "Error: app/build.gradle.kts file not found!"
-            exit 1
-          fi
-
-          echo "Parsing app/build.gradle.kts file..."
-
-          # Extract versionName and versionCode
-          versionName=$(grep -oP '(?<=versionName = ")[^"]*' app/build.gradle.kts)
-          versionCode=$(grep -oP '(?<=versionCode = )\\d+' app/build.gradle.kts)
-
-          echo "Extracted versionName: $versionName" # Debug print
-          echo "Extracted versionCode: $versionCode" # Debug print
-
-          # If extraction fails, exit with an error
-          if [ -z "$versionName" ]; then
-            echo "Error: versionName not found"
-            exit 1
-          fi
-
-          if [ -z "$versionCode" ]; then
-            echo "Error: versionCode not found"
-            exit 1
-          fi
-
-          # Converting versionCode from numeric to semantic version
-          major=$((versionCode / 100))
-          minor=$(((versionCode / 10) % 10))
-          patch=$((versionCode % 10))
-
-          semanticVersion="v$major.$minor.$patch"
-
-          echo "Derived semanticVersion: $semanticVersion" # Debug print
-
-          echo "versionName=$versionName" >> $GITHUB_ENV
-          echo "versionCode=$versionCode" >> $GITHUB_ENV
-          echo "VERSION_NAME=$versionName" >> $GITHUB_OUTPUT
-          echo "VERSION_CODE=$semanticVersion" >> $GITHUB_OUTPUT
-          echo "semanticVersion=$semanticVersion" >> $GITHUB_ENV
-
-      - name: Extract Version
-        id: extract_version      
-        run: |
-          VERSION=${{ steps.extract_version_from_gradle.outputs.VERSION_NAME }}
-          SEMANTIC_VERSION=${{ steps.extract_version_from_gradle.outputs.VERSION_CODE }}
-          echo "Version Name: $VERSION"
-          echo "Semantic Version Code: $SEMANTIC_VERSION"
-          if [ ${{ github.event.inputs.beta }} == true ]; then BETA=true; else BETA=false; fi
-          echo "beta=$BETA" >> $GITHUB_OUTPUT
-          TAG="v$VERSION"
-          echo "tag=$TAG" >> $GITHUB_OUTPUT
+      - name: Set Version
+        uses: chkfung/android-version-actions@v1.1
+        with:
+          gradlePath: app/build.gradle.kts
+          versionCode: ${{github.event.inputs.versionCode}}
+          versionName: ${{github.event.inputs.versionName}}
 
       - name: Build Signed APK
         run: |
           echo "${{ secrets.keystore }}" | base64 -d > $GITHUB_WORKSPACE/signing-key.jks
           chmod +x ./gradlew
           ./gradlew packageReleaseUniversalApk -Pandroid.injected.signing.store.file=$GITHUB_WORKSPACE/signing-key.jks -Pandroid.injected.signing.store.password=${{ secrets.keystore_password }} -Pandroid.injected.signing.key.alias=${{ secrets.key_alias }} -Pandroid.injected.signing.key.password=${{ secrets.key_password }}
-          sha256sum app/build/outputs/apk/from_bundle/release/app-release-universal.apk | cut -d " " -f 1 > app-release-universal.apk.sha256
-          gpg --batch --pinentry-mode loopback --passphrase "${{ secrets.PGP_PASSPHRASE }}" --sign --detach-sig app-release-universal.apk.sha256
-
-      - name: Create Tag
-        uses: mathieudutour/github-tag-action@v6.1
-        with:
-          github_token: ${{ secrets.GH_ACCESS_TOKEN }}
-          custom_tag: "${{ steps.extract_version.outputs.tag }}"
-          tag_prefix: ""
 
       - name: Release
-        uses: ncipollo/release-action@v1
-        with:
-          token: ${{ secrets.GH_ACCESS_TOKEN }}
-          tag: "${{ steps.extract_version.outputs.tag }}"
-          prerelease: "${{ steps.extract_version.outputs.beta }}"
-          draft: "${{ github.event.inputs.draft }}"
-          artifacts: app/build/outputs/apk/from_bundle/release/app-release-universal.apk
-          generateReleaseNotes: true
+        run: |
+          mv app/build/outputs/apk_from_bundle/release/app-release-universal.apk ./Manager.apk
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          tag="${{ github.event.inputs.versionCode }}"
+          git tag "$tag"
+          git push origin "$tag"
+          gh release create "$tag" \
+            --title "${{ github.event.inputs.versionName }}" \
+            --generate-notes \
+            ./Manager.apk
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
