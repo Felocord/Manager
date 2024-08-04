@@ -3,14 +3,12 @@ name: Build Release
 on:
   workflow_dispatch:
     inputs:
-      versionName:
-        required: true
-        description: This releases version name
-        default: "v1.0.0"
-      versionCode:
-        required: true
-        description: This releases version code
-        default: "100"
+      beta:
+        type: boolean
+        description: Is beta?
+      draft:
+        type: boolean
+        description: Is draft?
 
 jobs:
   build:
@@ -29,12 +27,18 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2.0.10
 
+      - name: Extract Version Name
+        id: extract_version
+        run: |
+          versionName=$(grep '^ *versionName' app/build.gradle.kts | sed -E 's/^ *versionName *= *"([^"]+)".*/\1/')
+          echo "VERSION_NAME=${versionName}" >> $GITHUB_ENV
+
       - name: Set Version
         uses: chkfung/android-version-actions@v1.1
         with:
           gradlePath: app/build.gradle.kts
-          versionCode: ${{github.event.inputs.versionCode}}
-          versionName: ${{github.event.inputs.versionName}}
+          versionCode: ${{ env.VERSION_NAME }}
+          versionName: ${{ env.VERSION_NAME }}
 
       - name: Build Signed APK
         run: |
@@ -47,12 +51,14 @@ jobs:
           mv app/build/outputs/apk_from_bundle/release/app-release-universal.apk ./Manager.apk
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          tag="${{ github.event.inputs.versionCode }}"
+          tag="${{ env.VERSION_NAME }}"
           git tag "$tag"
           git push origin "$tag"
           gh release create "$tag" \
-            --title "${{ github.event.inputs.versionName }}" \
+            --title "${{ env.VERSION_NAME }}" \
             --generate-notes \
-            ./Manager.apk
+            ./Manager.apk \
+            --prerelease=${{ github.event.inputs.beta }} \
+            --draft=${{ github.event.inputs.draft }}
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
