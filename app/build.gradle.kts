@@ -1,3 +1,6 @@
+import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.exclude
+import java.io.ByteArrayOutputStream
+
 plugins {
     alias(libs.plugins.aboutlibraries)
     alias(libs.plugins.android.application)
@@ -13,8 +16,7 @@ android {
         applicationId = "io.github.felitendo.manager"
         minSdk = 28
         targetSdk = 34
-        versionCode = 107
-        versionName = "v1.0.7"
+        versionName = "v1.0.6"
 
         buildConfigField("String", "GIT_BRANCH", "\"${getCurrentBranch()}\"")
         buildConfigField("String", "GIT_COMMIT", "\"${getLatestCommit()}\"")
