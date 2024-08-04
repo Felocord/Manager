@@ -31,11 +31,23 @@ jobs:
       - name: Extract Version From Gradle File
         id: extract_version_from_gradle
         run: |
+          # Extract versionName and versionCode
           versionName=$(grep -oP '(?<=versionName = ")[^"]*' app/build.gradle.kts)
           versionCode=$(grep -oP '(?<=versionCode = )\\d+' app/build.gradle.kts)
 
-          echo "Extracted versionName: $versionName"
-          echo "Extracted versionCode: $versionCode"
+          echo "Extracted versionName: $versionName" # Debug print
+          echo "Extracted versionCode: $versionCode" # Debug print
+
+          # If extraction fails, exit with an error
+          if [ -z "$versionName" ]; then
+            echo "Error: versionName not found"
+            exit 1
+          fi
+
+          if [ -z "$versionCode" ]; then
+            echo "Error: versionCode not found"
+            exit 1
+          fi
 
           # Converting versionCode from numeric to semantic version
           major=$((versionCode / 100))
@@ -44,7 +56,7 @@ jobs:
 
           semanticVersion="v$major.$minor.$patch"
 
-          echo "Derived semanticVersion: $semanticVersion"
+          echo "Derived semanticVersion: $semanticVersion" # Debug print
 
           echo "versionName=$versionName" >> $GITHUB_ENV
           echo "versionCode=$versionCode" >> $GITHUB_ENV
