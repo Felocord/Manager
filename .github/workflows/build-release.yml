@@ -31,6 +31,16 @@ jobs:
       - name: Extract Version From Gradle File
         id: extract_version_from_gradle
         run: |
+          set -e
+
+          # Ensure the file exists
+          if [ ! -f app/build.gradle.kts ]; then
+            echo "Error: app/build.gradle.kts file not found!"
+            exit 1
+          fi
+
+          echo "Parsing app/build.gradle.kts file..."
+
           # Extract versionName and versionCode
           versionName=$(grep -oP '(?<=versionName = ")[^"]*' app/build.gradle.kts)
           versionCode=$(grep -oP '(?<=versionCode = )\\d+' app/build.gradle.kts)
@@ -69,8 +79,8 @@ jobs:
         run: |
           VERSION=${{ steps.extract_version_from_gradle.outputs.VERSION_NAME }}
           SEMANTIC_VERSION=${{ steps.extract_version_from_gradle.outputs.VERSION_CODE }}
-          echo "version=$VERSION"
-          echo "semanticVersion=$SEMANTIC_VERSION"
+          echo "Version Name: $VERSION"
+          echo "Semantic Version Code: $SEMANTIC_VERSION"
           if [ ${{ github.event.inputs.beta }} == true ]; then BETA=true; else BETA=false; fi
           echo "beta=$BETA" >> $GITHUB_OUTPUT
           TAG="v$VERSION"
