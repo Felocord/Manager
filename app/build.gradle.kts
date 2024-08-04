@@ -1,6 +1,3 @@
-import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.exclude
-import java.io.ByteArrayOutputStream
-
 plugins {
     alias(libs.plugins.aboutlibraries)
     alias(libs.plugins.android.application)
@@ -147,7 +144,7 @@ fun exec(vararg command: String): String? {
             isIgnoreExitValue = true
         }
 
-        if(errout.size() > 0)
+        if (errout.size() > 0)
             throw Error(errout.toString(Charsets.UTF_8))
 
         stdout.toString(Charsets.UTF_8).trim()
