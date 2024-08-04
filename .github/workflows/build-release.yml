@@ -62,9 +62,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          PRERELEASE_FLAG=""
+          if [ "${{ steps.extract_version.outputs.beta }}" = "true" ]; then
+            PRERELEASE_FLAG="--prerelease"
+          fi
+
+          DRAFT_FLAG=""
+          if [ "${{ inputs.draft }}" = "true" ]; then
+            DRAFT_FLAG="--draft"
+          fi
+
           gh release create "${{ steps.extract_version.outputs.tag }}" \
             --title "${{ steps.extract_version.outputs.version }}" \
             --generate-notes \
-            --prerelease ${{ steps.extract_version.outputs.beta }} \
-            --draft ${{ github.event.inputs.draft }} \
+            $PRERELEASE_FLAG \
+            $DRAFT_FLAG \
             ./Manager.apk
