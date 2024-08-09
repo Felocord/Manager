@@ -152,9 +152,9 @@ class AboutScreen : Screen {
                         .fillMaxWidth()
                         .padding(top = 16.dp, bottom = 20.dp)
                 ) {
-                    UserEntry("Fiery", "Lead dev\niOS", "FieryFlames")
-                    UserEntry("Maisy", "Creator\nVendetta", "maisymoe", isLarge = true)
-                    UserEntry("Wing", "Lead dev\nManager", "wingio")
+                    UserEntry("Pylix", "Lead dev\nBunny", "amsyarasyiq")
+                    UserEntry("Felitendo", "Creator\nFelocord", "felitendo", isLarge = true)
+                    UserEntry("Maisy", "Lead dev\nVendetta", "maisymoe")
                 }
 
                 Text(
