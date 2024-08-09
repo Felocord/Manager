@@ -63,7 +63,7 @@ jobs:
             DRAFT_FLAG="--draft"
           fi
           gh release create "${{ steps.extract_version.outputs.tag }}" \
-            --title "${{ steps.extract_version.outputs.version }} (Build ${{ steps.extract_version.outputs.version_code }})" \
+            --title "${{ steps.extract_version.outputs.version }}" \
             --generate-notes \
             $PRERELEASE_FLAG \
             $DRAFT_FLAG \
