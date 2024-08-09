@@ -1,5 +1,4 @@
 name: Build and Release
-
 on:
   workflow_dispatch:
     inputs:
@@ -9,35 +8,30 @@ on:
       draft:
         type: boolean
         description: Is draft?
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
       - name: Setup JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
           cache: 'gradle'
-
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2.0.10
-
-      - name: Extract Version
+      - name: Extract Version and Code
         id: extract_version
         run: |
           VERSION=$(grep -oP 'versionName = "\K[^"]+' app/build.gradle.kts)
+          VERSION_CODE=$(grep -oP 'versionCode = \K\d+' app/build.gradle.kts)
           echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "version_code=$VERSION_CODE" >> $GITHUB_OUTPUT
           if [ ${{ inputs.beta }} == true ]; then BETA=true; else BETA=false; fi
           echo "beta=$BETA" >> $GITHUB_OUTPUT
-          TAG="$VERSION"  # Removed the extra 'v' here
-          echo "tag=$TAG" >> $GITHUB_OUTPUT
-
+          echo "tag=$VERSION_CODE" >> $GITHUB_OUTPUT
       - name: Build Signed APK
         run: |
           echo "${{ secrets.keystore }}" | base64 -d > $GITHUB_WORKSPACE/signing-key.jks
@@ -47,7 +41,6 @@ jobs:
             -Pandroid.injected.signing.store.password=${{ secrets.keystore_password }} \
             -Pandroid.injected.signing.key.alias=${{ secrets.key_alias }} \
             -Pandroid.injected.signing.key.password=${{ secrets.key_password }}
-
       - name: Find and Rename APK
         run: |
           APK_PATH=$(find . -name "*release*.apk" | head -n 1)
@@ -57,7 +50,6 @@ jobs:
           fi
           mv "$APK_PATH" ./Manager.apk
           echo "APK renamed to Manager.apk"
-
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -66,14 +58,12 @@ jobs:
           if [ "${{ steps.extract_version.outputs.beta }}" = "true" ]; then
             PRERELEASE_FLAG="--prerelease"
           fi
-
           DRAFT_FLAG=""
           if [ "${{ inputs.draft }}" = "true" ]; then
             DRAFT_FLAG="--draft"
           fi
-
           gh release create "${{ steps.extract_version.outputs.tag }}" \
-            --title "${{ steps.extract_version.outputs.version }}" \
+            --title "${{ steps.extract_version.outputs.version }} (Build ${{ steps.extract_version.outputs.version_code }})" \
             --generate-notes \
             $PRERELEASE_FLAG \
             $DRAFT_FLAG \
