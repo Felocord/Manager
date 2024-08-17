@@ -10,7 +10,6 @@
   ![Debug build status](https://img.shields.io/github/actions/workflow/status/Felocord/Manager/build-debug.yml?label=Debug%20Build&logo=github&style=for-the-badge&branch=main)
   [![Stars](https://img.shields.io/github/stars/Felocord/Manager?logo=github&style=for-the-badge)](https://github.com/Felocord/Manager/stargazers)
   [![Discord](https://img.shields.io/discord/1196075698301968455?logo=discord&logoColor=white&style=for-the-badge)](https://felo.gg/discord)
-  
   <br>
   
   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Felocord/Manager?logo=github&logoColor=%23fff&style=for-the-badge)
@@ -39,11 +38,6 @@ Build
     - Run `adb install app/build/outputs/apk/debug/app-debug.apk`
 
 Installing Plugins
----
-<div align="center">
-  <img src="images/plugin_icon.png" alt="Plugin icon" width="100px" style="border-radius: 15%" />
-</div>
-
 #### Discover and Install Plugins
 Enhance your Felocord experience with a variety of plugins. You can find an extensive collection of plugins in the dedicated `#plugins` channel on our Discord server.
 
