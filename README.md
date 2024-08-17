@@ -19,8 +19,8 @@ Installing Plugins
 #### Discover and Install Plugins
 Enhance your Felocord experience with a variety of plugins. You can find an extensive collection of plugins in the dedicated `#plugins` channel on our Discord server.
 
-1. Join our Discord community
-   - [![Join Discord](https://img.shields.io/badge/Join-Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://felo.gg/discord)
+1. Join our Discord Server
+  [![Join Discord](https://img.shields.io/badge/Join-Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://felo.gg/discord)
 
 2. Navigate to the `#plugins` channel
 
