@@ -38,6 +38,7 @@ Build
     - Run `adb install app/build/outputs/apk/debug/app-debug.apk`
 
 Installing Plugins
+---
 #### Discover and Install Plugins
 Enhance your Felocord experience with a variety of plugins. You can find an extensive collection of plugins in the dedicated `#plugins` channel on our Discord server.
 
