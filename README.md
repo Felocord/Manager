@@ -14,6 +14,25 @@
   
 </div>
 
+Installing Plugins
+---
+#### Discover and Install Plugins
+Enhance your Felocord experience with a variety of plugins. You can find an extensive collection of plugins in the dedicated `#plugins` channel on our Discord server.
+
+1. Join our Discord community
+   - [![Join Discord](https://img.shields.io/badge/Join-Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://felo.gg/discord)
+
+2. Navigate to the `#plugins` channel
+
+3. Browse available plugins
+   - Each plugin comes with a description and some even have showcase images
+
+4. Install your chosen plugins
+   - Click on the "🔗 Install" link provided with each plugin
+   - Click on the Install Pop-up to seemlessly install the Plugin
+
+5. Enjoy :)
+
 Build
 ---
 #### Prerequisites
@@ -29,29 +48,6 @@ Build
 3. Install on device
     - [Enable USB debugging](https://developer.android.com/studio/debug/dev-options) and plug in your phone
     - Run `adb install app/build/outputs/apk/debug/app-debug.apk`
-
-Installing Plugins
----
-#### Discover and Install Plugins
-Enhance your Felocord experience with a variety of plugins. You can find an extensive collection of plugins in the dedicated `#plugins` channel on our Discord server.
-
-1. Join our Discord community
-   - [![Join Discord](https://img.shields.io/badge/Join-Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://felo.gg/discord)
-
-2. Navigate to the `#plugins` channel
-
-3. Browse available plugins
-   - Each plugin comes with a description and installation instructions
-
-4. Install your chosen plugins
-   - Click on the "🔗 Install" link provided with each plugin
-   - Follow the provided instructions for seamless integration
-
-5. Enjoy your customized Felocord experience!
-
-<div align="center">
-  <img src="images/plugin_showcase.gif" alt="Plugin showcase" width="300px" />
-</div>
 
 > **Note:** Always review plugin descriptions and ensure they come from trusted sources before installation. To install a plugin, you must click on the "🔗 Install" link provided with each plugin in the #plugins channel.
 
