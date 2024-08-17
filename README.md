@@ -10,7 +10,7 @@
   ![Total downloads](https://img.shields.io/github/downloads/Felocord/Manager/total?style=for-the-badge&logo=github&label=Downloads%20(Total)&color=blue)
   ![GitHub top language](https://img.shields.io/github/languages/top/Felocord/Manager?style=for-the-badge)
   <br>
-  <img src="images/screenshot_home.jpg" width="200px">
+  <img src="images/felocord_screenshot_home.jpg" width="200px">
   
 </div>
 
