@@ -6,13 +6,6 @@
   [![Latest release](https://img.shields.io/github/v/release/Felocord/Manager?color=3AB8BA&display_name=release&label=Latest&style=for-the-badge)](https://github.com/Felocord/Manager/releases/latest)
   
   ---
-   <br>
-  ![Debug build status](https://img.shields.io/github/actions/workflow/status/Felocord/Manager/build-debug.yml?label=Debug%20Build&logo=github&style=for-the-badge&branch=main)
-  [![Stars](https://img.shields.io/github/stars/Felocord/Manager?logo=github&style=for-the-badge)](https://github.com/Felocord/Manager/stargazers)
-  [![Discord](https://img.shields.io/discord/1196075698301968455?logo=discord&logoColor=white&style=for-the-badge)](https://felo.gg/discord)
-
-  <br>
-  
   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Felocord/Manager?logo=github&logoColor=%23fff&style=for-the-badge)
   ![Downloads (latest)](https://img.shields.io/github/downloads/Felocord/Manager/latest/total?style=for-the-badge&logo=github&label=Downloads%20(Latest)&color=blue)
   ![Total downloads](https://img.shields.io/github/downloads/Felocord/Manager/total?style=for-the-badge&logo=github&label=Downloads%20(Total)&color=blue)
