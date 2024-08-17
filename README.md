@@ -3,7 +3,6 @@
   
   # Felocord Manager
   Easily install Felocord on Android
-  [![Latest release](https://img.shields.io/github/v/release/Felocord/Manager?color=3AB8BA&display_name=release&label=Latest&style=for-the-badge)](https://github.com/Felocord/Manager/releases/latest)
   
   ---
   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Felocord/Manager?logo=github&logoColor=%23fff&style=for-the-badge)
