@@ -29,7 +29,6 @@ Enhance your Felocord experience with a variety of plugins. You can find an exte
 
 4. Install your chosen plugins
    - Click on the "🔗 Install" link provided with each plugin
-   - Click on the Install Pop-up to seemlessly install the Plugin
 
 5. Enjoy :)
 
