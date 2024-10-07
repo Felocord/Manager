@@ -62,9 +62,9 @@ Felocord Manager is licensed under the Open Software License version 3.0
 [![License: OSL v3](https://img.shields.io/badge/License-OSL%20v3-blue.svg?style=for-the-badge)](https://github.com/Felocord/Manager/blob/main/LICENSE)
 
 ---
-
+--
 <div align="center">
-## FELO
+### [Felo](https://felo.gg)
 </div>
 
 ---
