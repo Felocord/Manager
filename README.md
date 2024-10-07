@@ -63,5 +63,5 @@ Felocord Manager is licensed under the Open Software License version 3.0
 
 ---
 
-### [FELO](https://felo.gg)
+Part of the ### [FELO](https://felo.gg) Project
 ---
