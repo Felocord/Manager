@@ -64,7 +64,7 @@ Felocord Manager is licensed under the Open Software License version 3.0
 ---
 
 <div align="center">
-## **FELO**
+## FELO
 </div>
 
 ---
